@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BaliYuks</title>
+    <!-- My Own Styles -->
+    <link rel="stylesheet" href="assets/app.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- awal header -->
+    <header>
+      <div class="jumbotron">
+        <div class="text-jumbotron">
+          <h1 style="font-size: 48px">Welcome</h1>
+          <p id="jumbotronText">
+            Selamat datang di BaliYuks - panduan terpercaya untuk menjelajahi pesona Bali! Di sini, Anda akan menemukan informasi lengkap tentang destinasi wisata, keunikan budaya, kuliner lezat, serta berbagai tips dan trik untuk
+            menjadikan perjalanan Anda di Bali tak terlupakan. Mari temukan keindahan dan keajaiban pulau dewata bersama BaliYuks!
+          </p>
+        </div>
+        <div class="btn-jumb">
+          <button id="prevBtn"><</button>
+          <button id="nextBtn">></button>
+        </div>
+      </div>
+      <nav>
+        <div class="mobile-menu-icon" id="mobile-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div>
+          <img class="logo" src="assets/img/logo.png" alt="logo-img" />
+        </div>
+        <ul>
+          <li><a href="#">Beranda</a></li>
+          <li><a id="featured-link" href="#sejarah">Sejarah</a></li>
+          <li><a id="" href="#senitari">Seni tari</a></li>
+          <li><a id="blog-link" href="#wisata ">Destinasi</a></li>
+          <li><a id="kategori-link" href="#budaya">Budaya</a></li>
+          <li><a id="" href="#geleri">Galeri</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- akhir header -->
+    <main>
+      <div class="content" id="content">
+        <div class="judul">
+          <h2 class="">Seputar Provinsi bali</h2>
+        </div>
+        <article class="background-seputar-bali" id="beranda">
+          <div class="seputar-bali">
+            <div class="seputar-bali-kiri">
+              <section class="what-bali">
+                <h2 class="judul-bali-kiri">Ada Apa Bali?</h2>
+                <p class="">
+                  Bali adalah sebuah pulau yang memukau di Indonesia, dikenal sebagai "Pulau Dewata" dan sering dijuluki "Pulau Seribu Pura". Kehidupan di Bali tercermin dalam harmoni antara kebudayaan, keagamaan, dan alam yang indah.
+                  Mayoritas penduduknya menganut agama Hindu, yang tercermin dalam pura-pura indah yang tersebar di seluruh pulau. Falsafah hidup Tri Hita Karana menjadi landasan bagi kehidupan masyarakat Bali, menekankan keseimbangan
+                  antara manusia, alam, dan tuhan. Selain kekayaan budaya dan keagamaan, Bali juga dikenal karena keindahan alamnya yang menakjubkan, termasuk pantai-pantai berpasir putih, sawah terasering yang hijau, dan gunung-gunung yang
+                  menjulang. Industri pariwisata yang berkembang pesat memungkinkan wisatawan untuk menikmati keindahan alam, seni, dan budaya Bali. Namun, di balik keindahannya, Bali juga memiliki tantangan dan perubahan. Pengembangan
+                  pariwisata yang cepat membawa dampak terhadap lingkungan dan budaya lokal. Oleh karena itu, penting bagi Bali untuk menjaga keseimbangan antara perkembangan ekonomi dan pelestarian lingkungan serta kebudayaan. Secara
+                  keseluruhan, Bali adalah destinasi yang memikat dengan kekayaan budaya, keindahan alam, dan keramahan penduduknya.
+                </p>
+                <div class="video-bali">
+                  <iframe
+                    width="955"
+                    height="450"
+                    src="https://www.youtube.com/embed/zHcr32gRRCs?si=xdjBGf_GMG24Am8C&amp;start=1"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+                </div>
+              </section>
+              <section class="geografis-bali">
+                <h2 class="judul-bali-kiri">letak geografis Bali?</h2>
+                <p>
+                  Bali merupakan sebuah pulau yang terletak di bagian barat Kepulauan Nusa Tenggara, Indonesia. Koordinat geografisnya berkisar antara 8°25′ hingga 8°50′ Lintang Selatan dan 114°25′ hingga 115°42′ Bujur Timur. Pulau Bali
+                  memiliki luas sekitar 5.780 kilometer persegi (sekitar 2.230 mil persegi) dan merupakan bagian dari provinsi Bali. Terpisah dari Pulau Jawa oleh Selat Bali dan dari Pulau Lombok oleh Selat Lombok.
+                </p>
+                <div class="lokasi-bali">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d507920.1749840025!2d114.98138625373726!3d-8.345833410984179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd141d3e8100fa1%3A0x24910fb14b24e690!2sBali!5e1!3m2!1sen!2sid!4v1713000501674!5m2!1sen!2sid"
+                    width="955"
+                    height="315"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p>
+                  Pulau Bali memiliki bentuk yang relatif oval dan memiliki garis pantai yang berliku-liku, dengan dataran rendah yang cukup luas di sebelah selatan dan dataran tinggi di bagian utara, termasuk Gunung Agung yang merupakan
+                  gunung tertinggi di pulau ini.
+                </p>
+              </section>
+            </div>
+            <div class="seputar-bali-kanan">
+              <div class="head-bali-kanan">
+                <div>
+                  <h2 class="judul-bali-kanan">Provinsi Bali</h2>
+                  <p>ᬩᬮᬶ</p>
+                  <p>Pulau Seribu Pura & Pulau Dewata</p>
+                </div>
+                <figure>
+                  <img src="assets/img/lambang-bali.png" />
+                  <figcaption>Lambang</figcaption>
+                </figure>
+              </div>
+              <div class="badan-bali-kanan">
+                <h2 class="judul-bali-kanan">Informasi Lainnya</h2>
+                <table>
+                  <tr>
+                    <th>Negara</th>
+                    <td>Indonesia</td>
+                  </tr>
+                  <tr>
+                    <th>Hari jadi</th>
+                    <td>14 Agustus 1958 (umur 65)</td>
+                  </tr>
+                  <tr>
+                    <th>Luas Total</th>
+                    <td>5.780 km<sup>2</sup></td>
+                  </tr>
+                  <tr>
+                    <th>Bahasa Daerah</th>
+                    <td>Bahasa Bali</td>
+                  </tr>
+                  <tr>
+                    <th>Kode Telepon</th>
+                    <td>0361</td>
+                  </tr>
+                  <tr>
+                    <th>Dasar hukum pendirian</th>
+                    <td>UU No. 64 Tahun 1958</td>
+                  </tr>
+                  <tr>
+                    <th>Kode Telepon</th>
+                    <td>0361</td>
+                  </tr>
+                </table>
+                <!-- <img class="bali-kanan-barong" src="assets/img/bali+united.png" style="margin-top: 20px; width: 350px" alt="" /> -->
+              </div>
+            </div>
+          </div>
+          <div class="jumlah-ragam-bali1">
+            <div class="jumlah-ragam-bali">
+              <h1 class="judul-bali-kanan">Jumlah Ragam di Bali</h1>
+              <div class="ragam-bali wrap">
+                <div class="item-circle">
+                  <div class="circle">
+                    <img src="assets/img/jumlah-populasi.png" alt="" />
+                  </div>
+                  <div>
+                    <h1>Jumlah populasi di bali</h1>
+                  </div>
+                  <div class="button-jumlah-bali">
+                    <a class="btn popup-btn" href="#" data-target="populasi">See More</a>
+                  </div>
+                </div>
+                <div class="item-circle">
+                  <div class="circle">
+                    <img src="assets/img/jumlah-suku.png" alt="" />
+                  </div>
+                  <div>
+                    <h1>Jumlah suku di pulau bali</h1>
+                  </div>
+                  <div class="button-jumlah-bali">
+                    <a class="btn popup-btn" href="#" data-target="suku">See More</a>
+                  </div>
+                </div>
+                <div class="item-circle">
+                  <div class="circle">
+                    <img src="assets/img/jumlah-agama-apa-aja.png" alt="" />
+                  </div>
+                  <div>
+                    <h1>Jumlah agama di bali</h1>
+                  </div>
+                  <div class="button-jumlah-bali">
+                    <a class="btn popup-btn" href="#" data-target="agama">See More</a>
+                  </div>
+                </div>
+
+                <div class="popup-wrap populasi-wrap">
+                  <div class="popup-box populasi-box">
+                    <h2 class="judul-popup">Jumlah populasi di Bali</h2>
+                    <p class="text-popup">Sekadar info populasi Bali, lihat grafik di bawah. Memperlihatkan pembagian laki-laki dan perempuan, gambaran demografi pulau ini.</p>
+                    <p style="color: black" id="total-population-populasi"></p>
+                    <div>
+                      <a href="#" class="fa fa-male"></a>
+                      <a href="#" class="fa fa-female"></a>
+                    </div>
+                    <canvas id="chart-populasi" style="width: 100%; max-width: 700px"></canvas>
+                    <a class="close-btn popup-close" href="#">x</a>
+                  </div>
+                </div>
+
+                <div class="popup-wrap suku-wrap">
+                  <div class="popup-box suku-box">
+                    <h2 class="judul-popup">Jumlah suku di Bali</h2>
+                    <p class="text-popup">Sekadar informasi tentang jumlah suku yang tinggal di Pulau Bali, berikut adalah grafik yang menampilkan distribusi suku-suku tersebut..</p>
+                    <p style="color: black" id="total-population-suku"></p>
+                    <canvas id="chart-suku" style="width: 100%; max-width: 700px"></canvas>
+                    <a class="close-btn popup-close" href="#">x</a>
+                  </div>
+                </div>
+
+                <div class="popup-wrap agama-wrap">
+                  <div class="popup-box agama-box">
+                    <h2 class="judul-popup">Jumlah agama di Bali</h2>
+                    <p class="text-popup">Berikut adalah grafik yang menunjukkan distribusi jumlah pemeluk agama di Pulau Bali.</p>
+                    <p style="color: black" id="total-population-agama"></p>
+                    <canvas id="chart-agama" style="width: 100%; max-width: 1000px"></canvas>
+                    <a class="close-btn popup-close" href="#">x</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        </article>
+
+        <!-- tentang-sejarah -->
+        <div id="sejarah" class="judul">
+          <h2 class="">Sejarah bali dulu sampai sekarang</h2>
+        </div>
+        <article class="sejarah">
+          <p class="intro-sejarah">
+            <strong>M</strong>ari kita mulai perjalanan kita menyusuri sejarah Bali - sebuah perjalanan yang akan membawa kita ke masa lalu pulau yang kaya akan budaya ini. Dari jejak-jejak kerajaan Hindu-Buddha pada abad ke-14 M, hingga
+            masa kolonial yang penuh gejolak, dan perjalanan Bali menuju kemerdekaan serta pesatnya perkembangan pasca-kemerdekaan. Yuk, kita telusuri bersama bagaimana Bali menjelma menjadi pulau yang kita kenal hari ini!
+          </p>
+          <div class="sjr">
+            <div class="sjr-1">
+              <div class="bg-sjr1-kiri">
+                <img class="image-kiri-sjr" src="assets/img/abad ke-18.png" alt="" />
+              </div>
+              <div class="pocici-mobile" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <h2>Abad Ke-14 M</h2>
+                <p class="text-sejarah">
+                  <strong>P</strong>ada abad ke-14 Masehi, Bali jatuh di bawah kekuasaan Majapahit yang dipimpin oleh Mahapatih Gajah Mada. Ini adalah periode yang penting dalam sejarah Bali, di mana pulau ini menjadi bagian dari kerajaan
+                  yang luas dan berpengaruh di Nusantara. Di bawah pemerintahan Majapahit, Bali mengalami periode stabilitas politik yang relatif lama, sementara kebudayaannya terus berkembang. Memasuki era abad ke-15 hingga ke-19, Bali
+                  menyaksikan kemajuan yang signifikan dalam berbagai bidang, termasuk seni, sastra, dan arsitektur. Ini adalah masa keemasan bagi seni dan kebudayaan Bali, di mana karya-karya monumental seperti relief-relief batu, ukiran
+                  kayu, dan seni pahat menjadi ciri khasnya. Seni tari, musik, dan seni lukis juga berkembang pesat, menciptakan warisan budaya yang kaya dan beragam. Selama periode ini, beberapa kerajaan besar muncul dan berkuasa di Bali.
+                  Di antara mereka adalah Kerajaan Gelgel, yang menjadi pusat kebudayaan dan politik yang penting. Kerajaan Klungkung, Karangasem, Mengwi, Buleleng, dan Tabanan juga memainkan peran penting dalam sejarah Bali pada saat itu.
+                  Mereka tidak hanya menjadi pusat kekuasaan politik, tetapi juga menjadi pelindung seni, sastra, dan agama Hindu-Bali yang khas.
+                </p>
+              </div>
+              <div class="bg-sjr1-kiri">
+                <img class="image-kiri-sjr" src="assets/img/abad ke-16.png" alt="" />
+              </div>
+              <div class="pocici-mobile" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <h2>Masa Kolonial</h2>
+                <p>
+                  <strong>P</strong>ada masa kolonial, Bali mengalami sentuhan pengaruh Barat yang datang melalui perdagangan dan eksplorasi. Interaksi ini, khususnya dengan bangsa Eropa, membawa perubahan signifikan dalam politik, ekonomi,
+                  dan budaya pulau ini. Belanda mulai menunjukkan minatnya untuk menguasai Bali sejak abad ke-17 Masehi. Namun, usaha mereka untuk mengambil alih penuh pulau ini baru berhasil pada abad ke-19 Masehi setelah serangkaian
+                  konflik dan perang dengan beberapa kerajaan di Bali yang berlangsung cukup lama. Selama periode ini, Belanda menetapkan kekuasaan kolonialnya di Bali dengan menerapkan sistem pemerintahan yang otoriter dan menggantikan
+                  struktur pemerintahan tradisional Bali dengan administrasi kolonial. Mereka juga mengontrol perdagangan dan sumber daya alam pulau untuk kepentingan ekonomi kolonial mereka sendiri. Selain itu, kehadiran Belanda juga
+                  membawa perubahan budaya yang signifikan. Pengaruh Barat, terutama dari Belanda, mulai memengaruhi aspek-aspek kehidupan sehari-hari di Bali, termasuk dalam bidang arsitektur, seni, dan bahasa. Namun, meskipun terjadi
+                  interaksi antara budaya Bali dan Barat, nilai-nilai dan tradisi budaya Bali tetap bertahan kuat di tengah tekanan kolonial.
+                </p>
+              </div>
+              <div class="bg-sjr1-kiri">
+                <img class="image-kiri-sjr" src="assets/img/Setelah Kemerdekaan.png" alt="" />
+              </div>
+            </div>
+
+            <div class="sjr-3">
+              <div class="pocici-mobile" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-sine">
+                <h2>Abad ke-18 M</h2>
+                <p>
+                  <strong>K</strong>etika abad ke-8 menjelang, Bali memasuki periode yang melihat perubahan besar dalam kebudayaannya. Di tengah aliran dagang yang semakin intensif dan pertukaran budaya yang berkembang pesat, Bali mulai
+                  merasakan pengaruh kuat dari ajaran Hindu-Buddha yang dibawa oleh pedagang dan pemuka agama dari tanah air asalnya, India dan Jawa. Prasasti-prasasti yang berasal dari periode ini, terutama yang ditemukan pada abad ke-8
+                  Masehi, memberikan bukti yang menarik tentang keberadaan kerajaan-kerajaan kecil yang berdiri tegak di Bali. Kerajaan-kerajaan ini tidak hanya hidup secara mandiri, tetapi juga menjalin hubungan yang erat dengan
+                  kerajaan-kerajaan besar di Jawa, seperti Tarumanegara, Mataram Kuno, dan Singhasari. Ini mencerminkan jaringan politik dan perdagangan yang luas yang telah dibangun pada saat itu. Tidak hanya dalam catatan sejarah, tetapi
+                  juga dalam prasasti-prasasti yang ditemukan, nama Bali Dwipa (“Pulau Bali”) terus muncul. Salah satu contohnya adalah pilar prasasti Blanjong, yang diperkirakan berasal dari tahun 914 Masehi. Prasasti ini, yang ditulis
+                  oleh Sri Kesari Warmadewa, mengkonfirmasi keberadaan Bali Dwipa dan menambahkan kedalaman historis ke akar budaya pulau ini.
+                </p>
+              </div>
+              <div class="bg-sjr1-kiri">
+                <img class="image-kanan-sjr" src="assets/img/abad ke-14.png" alt="" />
+              </div>
+              <div class="pocici-mobile" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-sine">
+                <h2>Abad Ke-16 M</h2>
+                <p>
+                  <strong>P</strong>ada abad ke-16 Masehi, Indonesia menyaksikan kedatangan Islam yang signifikan, yang membawa perubahan besar dalam lanskap agama dan politik di Nusantara. Di Jawa, agama Islam mulai menyebar dengan cepat
+                  dan menyebabkan keruntuhan banyak kerajaan Hindu-Buddha yang sebelumnya berkuasa. Kedatangan Islam ke Jawa tidak hanya berdampak lokal, tetapi juga memengaruhi pulau-pulau tetangga, termasuk Bali. Banyak pengungsi dari
+                  Jawa, yang melarikan diri dari penindasan atau perubahan politik yang disebabkan oleh konversi agama, mencari perlindungan dan tempat tinggal baru di Bali. Kedatangan mereka membawa bersama pengaruh budaya Islam yang kuat,
+                  termasuk tradisi, praktik keagamaan, bahasa, dan sistem nilai. Meskipun Bali tetap menjadi bastion kebudayaan Hindu yang kuat, kedatangan pengungsi Jawa yang membawa Islam mengakibatkan dinamika budaya yang berubah di
+                  pulau ini. Interaksi antara budaya Hindu Bali dan Islam Jawa menghasilkan sintesis budaya yang unik, menciptakan warisan budaya yang kaya dan beragam di Bali yang tetap terlihat hingga hari ini.
+                </p>
+              </div>
+              <div class="bg-sjr1-kiri">
+                <img class="image-kanan-sjr" src="assets/img/Masa Kolonial.png" alt="" />
+              </div>
+              <div class="pocici-mobile" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-sine">
+                <h2 class="merdeka-h2">Setelah Kemerdekaan</h2>
+                <p>
+                  <strong>S</strong>etelah kemerdekaan Republik Indonesia pada tanggal 17 Agustus 1945, Bali mengalami perkembangan yang signifikan dalam berbagai aspek kehidupan. Pemerintah Indonesia mengalokasikan dana untuk membangun
+                  infrastruktur di Bali, termasuk jalan raya, bandara, pelabuhan, dan sarana transportasi lainnya, yang meningkatkan konektivitas pulau ini dengan wilayah lain di Indonesia dan dunia. Pertumbuhan ekonomi pun pesat, dengan
+                  sektor pariwisata menjadi penggerak utama. Namun, Bali tetap memelihara dan mempertahankan kekayaan budaya dan tradisinya, seperti upacara adat, tarian, musik, dan seni rupa. Pemerintah juga meningkatkan akses pendidikan
+                  dan layanan kesehatan di Bali, sementara industri kreatif berkembang pesat di pulau ini. Dengan demikian, Bali tidak hanya berkembang secara ekonomi dan infrastruktur, tetapi juga mempertahankan identitas budayanya yang
+                  kaya dan menjadi salah satu destinasi wisata terkemuka di Indonesia dan dunia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div id="senitari" class="judul">
+          <h2 class="">Mengenal seni tari khas bali</h2>
+        </div>
+        <!-- tarian bali -->
+        <article id="horizontal" class="">
+          <div class="dast-dest">
+            <!-- seni tari pertama -->
+            <div class="horizontal__item destination">
+              <div class="horizontal__num dest-kiri">
+                <div class="cont">
+                  <div>
+                    <h2>TARI BARONG</h2>
+                  </div>
+                  <div>
+                    <p>
+                      Tarian Barong adalah warisan budaya Bali yang terkenal dan penting, menampilkan makhluk mitologis Barong sebagai simbol kebaikan dan perlindungan dalam kepercayaan Hindu. Ceritanya sering kali menggambarkan pertarungan
+                      antara Barong dan Rangda, melambangkan perjuangan antara kebaikan dan kejahatan. Dipentaskan dalam upacara adat, ritual keagamaan, dan festival, penarinya mengenakan kostum dari bambu dan kayu dengan gerakan yang kuat
+                      dan energik. Selain menjadi bagian dari upacara, tarian ini juga menarik bagi wisatawan yang ingin merasakan kekayaan budaya dan spiritual Bali.
+                    </p>
+                  </div>
+                </div>
+                <img class="tari-img" src="assets/img/tari-barong.png" alt="senitari" />
+              </div>
+            </div>
+
+            <!-- seni tari kedua -->
+            <div class="horizontal__item destination">
+              <div class="horizontal__num dest-kiri">
+                <div class="dest">
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="cont">
+                  <div>
+                    <h2>TARI KECAK</h2>
+                  </div>
+                  <div>
+                    <p>
+                      Tari Kecak adalah tarian tradisional Bali yang unik karena tidak melibatkan penggunaan musik gamelan, melainkan suara-suara nyanyian para penari. Ceritanya sering kali mengambil episode dari epik Ramayana, dengan
+                      puluhan atau bahkan ratusan penari yang duduk melingkar sambil menyanyikan "cak" secara berulang-ulang. Para penari menciptakan berbagai pola gerakan yang dramatis, menggambarkan kisah-kisah heroik dan mitologis. Tari
+                      Kecak biasanya dipentaskan di tempat terbuka, menjadikannya pengalaman budaya yang menakjubkan bagi para penonton.
+                    </p>
+                  </div>
+                </div>
+                <img class="tari-img" src="assets/img/tari-kecak.png" alt="senitari" />
+              </div>
+            </div>
+
+            <!-- seni tari ketiga-->
+            <div class="horizontal__item destination">
+              <div class="horizontal__num dest-kiri">
+                <div class="dest">
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="cont">
+                  <div>
+                    <h2>TARI PENDEN</h2>
+                  </div>
+                  <div>
+                    <p>
+                      Tari Pendet adalah salah satu tarian tradisional Bali yang paling khas dan dianggap sebagai tarian penyambutan. Biasanya, tarian ini dilakukan oleh sekelompok penari perempuan yang memegang bunga dan wadah kecil yang
+                      berisi bunga dan kembang. Gerakan mereka yang lemah gemulai mengikuti melodi musik yang lembut dan mengalun. Tarian ini sering dipentaskan sebagai bagian dari upacara keagamaan, seperti ritual penyucian di kuil atau
+                      sebagai bentuk penghormatan kepada dewa. Tari Pendet dianggap sebagai ungkapan rasa syukur dan kegembiraan atas kehadiran dewa dan menjadi simbol keindahan dan kedamaian di Bali.
+                    </p>
+                  </div>
+                </div>
+                <img class="tari-img" src="assets/img/tari-pendet.png" alt="senitari" />
+              </div>
+            </div>
+
+            <!-- seni tari keempat -->
+            <div class="horizontal__item destination">
+              <div class="horizontal__num dest-kiri">
+                <div class="cont">
+                  <div>
+                    <h2>TARI TOPENG</h2>
+                  </div>
+                  <div>
+                    <p>
+                      Tari Topeng adalah salah satu tarian tradisional Bali yang menampilkan penari yang mengenakan topeng dan memerankan berbagai karakter mitologis atau sejarah. Setiap topeng memiliki makna dan karakteristiknya sendiri.
+                      Para penari menggunakan gerakan tubuh dan mimik wajah untuk mengungkapkan karakter yang mereka perankan. Tari Topeng sering dipentaskan dalam berbagai upacara adat, ritual keagamaan, dan pertunjukan seni di Bali
+                      sebagai bentuk penghormatan kepada leluhur atau dewa. Ini juga menjadi daya tarik bagi wisatawan yang ingin merasakan kekayaan budaya Bali.
+                    </p>
+                  </div>
+                </div>
+                <img class="tari-img" src="assets/img/tari-topeng2.png" alt="senitari" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="seni-tari-mobile">
+          <div class="">
+            <!-- seni tari pertama -->
+            <div class="destination">
+              <div class="dest-kiri">
+                <div class="cont">
+                  <div>
+                    <h2>TARI BARONG</h2>
+                  </div>
+                  <div>
+                    <p>
+                      Tarian Barong adalah warisan budaya Bali yang terkenal dan penting, menampilkan makhluk mitologis Barong sebagai simbol kebaikan dan perlindungan dalam kepercayaan Hindu. Ceritanya sering kali menggambarkan pertarungan
+                      antara Barong dan Rangda, melambangkan perjuangan antara kebaikan dan kejahatan. Dipentaskan dalam upacara adat, ritual keagamaan, dan festival, penarinya mengenakan kostum dari bambu dan kayu dengan gerakan yang kuat
+                      dan energik. Selain menjadi bagian dari upacara, tarian ini juga menarik bagi wisatawan yang ingin merasakan kekayaan budaya dan spiritual Bali.
+                    </p>
+                  </div>
+                </div>
+                <img class="tari-img" src="assets/img/tari-barong.png" alt="senitari" />
+              </div>
+            </div>
+
+            <!-- seni tari kedua -->
+            <div class="destination">
+              <div class="dest-kiri">
+                <div class="dest">
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="cont">
+                  <div>
+                    <h2>TARI KECAK</h2>
+                  </div>
+                  <div>
+                    <p>
+                      Tari Kecak adalah tarian tradisional Bali yang unik karena tidak melibatkan penggunaan musik gamelan, melainkan suara-suara nyanyian para penari. Ceritanya sering kali mengambil episode dari epik Ramayana, dengan
+                      puluhan atau bahkan ratusan penari yang duduk melingkar sambil menyanyikan "cak" secara berulang-ulang. Para penari menciptakan berbagai pola gerakan yang dramatis, menggambarkan kisah-kisah heroik dan mitologis. Tari
+                      Kecak biasanya dipentaskan di tempat terbuka, menjadikannya pengalaman budaya yang menakjubkan bagi para penonton.
+                    </p>
+                  </div>
+                </div>
+                <img class="tari-img" src="assets/img/tari-kecak.png" alt="senitari" />
+              </div>
+            </div>
+
+            <!-- seni tari ketiga-->
+            <div class="destination">
+              <div class="dest-kiri">
+                <div class="dest">
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="cont">
+                  <div>
+                    <h2>TARI PENDEN</h2>
+                  </div>
+                  <div>
+                    <p>
+                      Tari Pendet adalah salah satu tarian tradisional Bali yang paling khas dan dianggap sebagai tarian penyambutan. Biasanya, tarian ini dilakukan oleh sekelompok penari perempuan yang memegang bunga dan wadah kecil yang
+                      berisi bunga dan kembang. Gerakan mereka yang lemah gemulai mengikuti melodi musik yang lembut dan mengalun. Tarian ini sering dipentaskan sebagai bagian dari upacara keagamaan, seperti ritual penyucian di kuil atau
+                      sebagai bentuk penghormatan kepada dewa. Tari Pendet dianggap sebagai ungkapan rasa syukur dan kegembiraan atas kehadiran dewa dan menjadi simbol keindahan dan kedamaian di Bali.
+                    </p>
+                  </div>
+                </div>
+                <img class="tari-img" src="assets/img/tari-pendet.png" alt="senitari" />
+              </div>
+            </div>
+
+            <!-- seni tari keempat -->
+            <div class="destination">
+              <div class="dest-kiri">
+                <div class="cont">
+                  <div>
+                    <h2>TARI TOPENG</h2>
+                  </div>
+                  <div>
+                    <p>
+                      Tari Topeng adalah salah satu tarian tradisional Bali yang menampilkan penari yang mengenakan topeng dan memerankan berbagai karakter mitologis atau sejarah. Setiap topeng memiliki makna dan karakteristiknya sendiri.
+                      Para penari menggunakan gerakan tubuh dan mimik wajah untuk mengungkapkan karakter yang mereka perankan. Tari Topeng sering dipentaskan dalam berbagai upacara adat, ritual keagamaan, dan pertunjukan seni di Bali
+                      sebagai bentuk penghormatan kepada leluhur atau dewa. Ini juga menjadi daya tarik bagi wisatawan yang ingin merasakan kekayaan budaya Bali.
+                    </p>
+                  </div>
+                </div>
+                <img class="tari-img" src="assets/img/tari-topeng2.png" alt="senitari" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div class="judul judul-corousel" id="wisata" style="margin-bottom: 6%">
+            <h2 class="corosel-all">Menjelajahi Destinasi Keindahan Bali</h2>
+          </div>
+          <!-- carousel -->
+          <div class="carousel">
+            <!-- list item -->
+            <div class="list">
+              <div class="item">
+                <img src="assets/img/img1.jpg" />
+                <div class="content">
+                  <div class="author">Rekomendasi</div>
+                  <div class="title">DESTINASI WISATA</div>
+                  <div class="topic">Pura Lempuyang</div>
+                  <div class="des">
+                    Pura Lempuyang, destinasi wisata yang tenar di Pulau Bali, Indonesia, punya pengalaman yang bikin hati berdebar. Naikin 1.700 anak tangga buat nyampe ke sana tuh kayak petualangan penyucian diri. Di puncaknya, kita
+                    disuguhin panorama Gunung Agung yang megah, tapi yang paling seru adalah "Gerbang Surga" yang bikin kita merasa kayak lagi di ambang pintu surga beneran. Dengan keindahan alam yang bikin nganga dan nilai-nilai spiritual
+                    yang terasa, Pura Lempuyang jadi destinasi wajib kalau lagi di Bali.
+                  </div>
+                  <div class="buttons">
+                    <a href="">LIHAT DETAIL</a>
+                    <a href="https://maps.app.goo.gl/JePniGrq42p4tNzX9">LOCATION</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="assets/img/img2.jpg" />
+                <div class="content">
+                  <div class="author">Rekomendasi</div>
+                  <div class="title">DESTINASI WISATA</div>
+                  <div class="topic">Tanah LOT</div>
+                  <div class="des">
+                    Tanah Lot di Pulau Bali, dengan candi kuno yang berdiri megah di atas batu karang besar, menawarkan pengalaman matahari terbenam yang spektakuler di atas laut. Keindahan alamnya yang memukau menciptakan latar belakang
+                    yang sempurna bagi momen yang tak terlupakan ini. Pesonanya juga terletak pada aura spiritual yang kuat yang dirasakan oleh pengunjung, menambah kesan magis dari destinasi wisata ini. Selain itu, suasana budaya Bali yang
+                    autentik dengan warung-warung di sekitar pura menjual kerajinan tangan lokal dan kuliner khas Bali, memberikan pengalaman wisata yang lengkap bagi para pengunjung.
+                  </div>
+                  <div class="buttons">
+                    <a href="">LIHAT DETAIL</a>
+                    <a href="https://maps.app.goo.gl/s8c8qiQo51sXiKCC9">LOCATION</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="assets/img/img3.jpg" />
+                <div class="content">
+                  <div class="author">Rekomendasi</div>
+                  <div class="title">DESTINASI WISATA</div>
+                  <div class="topic">Pura ulun danu</div>
+                  <div class="des">
+                    Pura Ulun Danu Bratan menarik karena lokasinya yang spektakuler di tepi Danau Bratan, dikelilingi oleh Gunung Beratan. Arsitektur tradisional Bali yang megah dipadukan dengan alam yang memukau menciptakan pemandangan
+                    luar biasa. Keunikan lainnya terletak pada perannya sebagai tempat ibadah Dewi Danu, menunjukkan hubungan erat antara agama Hindu dan lingkungan alam. Saat air Danau Bratan naik pada musim hujan, pura ini terlihat
+                    melayang di atas permukaan air, menciptakan pemandangan memesona. Kehadirannya tidak hanya menarik wisatawan, tapi juga memberikan pengalaman spiritual bagi pencari kedamaian.
+                  </div>
+                  <div class="buttons">
+                    <a href="">LIHAT DETAIL</a>
+                    <a href="https://maps.app.goo.gl/HAbD3nEDxmjQUB397">LOCATION</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="assets/img/img4.jpg" />
+                <div class="content">
+                  <div class="author">Rekomendasi</div>
+                  <div class="title">DESTINASI</div>
+                  <div class="topic">Pantai Kelingking</div>
+                  <div class="des">
+                    Pantai Kelingking di Pulau Nusa Penida, Bali, punya keunikan luar biasa dengan tebingnya yang mirip kepala hewan super besar, seperti T-Rex! Nama lainnya "T-Rex Bay" karena itu. Pemandangannya beda banget dan jadi magnet
+                    buat pengunjung. Pantainya punya pasir putih lembut dan air lautnya biru toska yang bening banget, kontras dengan tebing-tebing curam yang menjulang tinggi di sekitarnya. Buat nyampe pantai ini, kita harus turun ratusan
+                    anak tangga batu, bikin sensasi petualangan banget. Dengan keindahan alamnya yang luar biasa dan pemandangan tebingnya yang beda, Pantai Kelingking jadi destinasi wisata yang musti dikunjungi di Pulau Nusa Penida.
+                  </div>
+                  <div class="buttons">
+                    <a href="">LIHAT DETAIL</a>
+                    <a href="https://maps.app.goo.gl/kZXV8BsLQPsaJRMM8">LOCATION</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- list thumnail -->
+            <div class="thumbnail">
+              <div class="item">
+                <img src="assets/img/img1.jpg" />
+                <div class="content">
+                  <div class="title">Pura Lempuyang</div>
+                  <div class="description">Description</div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="assets/img/img2.jpg" />
+                <div class="content">
+                  <div class="title">Tanah LOT</div>
+                  <div class="description">Description</div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="assets/img/img3.jpg" />
+                <div class="content">
+                  <div class="title">Pura ulun danu</div>
+                  <div class="description">Description</div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="assets/img/img4.jpg" />
+                <div class="content">
+                  <div class="title">Pantai Kelingking</div>
+                  <div class="description">Description</div>
+                </div>
+              </div>
+            </div>
+            <!-- next prev -->
+
+            <div class="arrows">
+              <button id="prev"><</button>
+              <button id="next">></button>
+            </div>
+            <!-- time running -->
+            <div class="time"></div>
+          </div>
+        </article>
+
+        <div class="judul" id="budaya">
+          <h2 class="">beragam jenis budaya yang kaya dan bervariasi</h2>
+        </div>
+        <article class="background-card-budaya">
+          <div class="card-card-budaya">
+            <div class="card-budaya">
+              <div class="wrap-budaya animate pop">
+                <div class="overlay">
+                  <div class="overlay-content animate slide-left delay-2">
+                    <h1 class="animate slide-left pop delay-4">Agama dan Ritual</h1>
+                  </div>
+                  <div class="image-content animate slide delay-5"></div>
+                  <div class="dots animate">
+                    <div class="dot animate slide-up delay-6"></div>
+                    <div class="dot animate slide-up delay-7"></div>
+                    <div class="dot animate slide-up delay-8"></div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p>
+                    <img class="inset" src="assets/img/agama+ritual.png" alt="" />Di Bali, ritual kea gamaan menyatu dengan kehidupan sehari-hari. Mulai dari upacara persembahan hingga festival agama, kepercayaan Hindu mewarnai setiap
+                    aktivitas.
+                  </p>
+                  <p>Upacara kelahiran, pernikahan, dan kematian, serta festival seperti Galungan dan Nyepi.</p>
+                  <div class="button-budaya">
+                    <a class="tombol-budaya" href="agama+ritual.html">See More</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wrap-budaya animate pop">
+                <div class="overlay">
+                  <div class="overlay-content animate slide-left delay-2">
+                    <h1 class="animate slide-left pop delay-4">Adat dan Tradisi</h1>
+                  </div>
+                  <div class="image-content image-content-1 animate slide delay-5"></div>
+                  <div class="dots animate">
+                    <div class="dot animate slide-up delay-6"></div>
+                    <div class="dot animate slide-up delay-7"></div>
+                    <div class="dot animate slide-up delay-8"></div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p>
+                    <img class="inset" src="assets/img/adat+tradisi.png" alt="" />Adat dan tradisi Bali menggam barkan ke kayaan budaya yang mendalam. Sistem sosial yang terstruktur, tata cara pernikahan, dan adat istiadat sehari-hari
+                    mencerminkan nilai-nilai yang diwarisi dari generasi ke generasi.
+                  </p>
+                  <!-- <p>
+                    Upacara adat, seperti metatah (potong gigi) dan ngaben (pemakaman), juga menjadi bagian integral dari kehidupan masyarakat. Dengan menjaga warisan ini, Bali terus memperkaya dan mempertahankan identitasnya yang unik.
+                  </p> -->
+                  <div class="button-budaya">
+                    <a class="tombol-budaya" href="adat+tradisi.html">See More</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wrap-budaya animate pop">
+                <div class="overlay">
+                  <div class="overlay-content animate slide-left delay-2">
+                    <h1 class="animate slide-left pop delay-4">Lukis dan Patung</h1>
+                  </div>
+                  <div class="image-content image-content-2 animate slide delay-5"></div>
+                  <div class="dots animate">
+                    <div class="dot animate slide-up delay-6"></div>
+                    <div class="dot animate slide-up delay-7"></div>
+                    <div class="dot animate slide-up delay-8"></div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p>
+                    <img class="inset" src="assets/img/lukisan+patung.png" alt="" />Seni Lukis dan Patun g di Bali mencermi nkan keindahan dan kedalaman budaya pulau ini. Lukisan Bali sering menggambarkan mitologi Hindu, pemandangan alam,
+                    dan kehidupan sehari-hari dengan warna cerah dan detail yang rumit.
+                  </p>
+                  <!-- <p>Tak ketinggalan, festival agama seperti Galungan dan Nyepi juga menjadi momen penting dalam tahun kalender Bali.</p> -->
+                  <div class="button-budaya">
+                    <a class="tombol-budaya" href="lukis+patung.html">See More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <h2 id="geleri" class="judul">Galeri</h2>
+          <div class="gallery-container">
+            <div class="gallery" id="gallery1">
+              <div class="slide-gallery blue" onclick="openLightbox('assets/img/abad ke-14.png')">
+                <img src="assets/img/abad ke-14.png" alt="Image 1" />
+              </div>
+              <div class="slide-gallery" onclick="openLightbox('assets/img/abad ke-16.png')">
+                <img src="assets/img/abad ke-16.png" alt="Image 2" />
+              </div>
+              <div class="slide-gallery" onclick="openLightbox('assets/img/abad ke-18.png')">
+                <img src="assets/img/abad ke-18.png" alt="Image 3" />
+              </div>
+              <div class="slide-gallery" onclick="openLightbox('assets/img/adat+tradisi.png')">
+                <img src="assets/img/adat+tradisi.png" alt="Image 4" />
+              </div>
+              <div class="slide-gallery" onclick="openLightbox('assets/img/agama+ritual.png')">
+                <img src="assets/img/agama+ritual.png" alt="Image 5" />
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container">
+            <div class="gallery" id="gallery2">
+              <div class="slide-gallery blue" onclick="openLightbox('assets/img/lukisan+klasik.png')">
+                <img src="assets/img/lukisan+klasik.png" alt="Image 6" />
+              </div>
+              <div class="slide-gallery" onclick="openLightbox('assets/img/lukisan+kolonial.png')">
+                <img src="assets/img/lukisan+kolonial.png" alt="Image 7" />
+              </div>
+              <div class="slide-gallery" onclick="openLightbox('assets/img/Patung Catur Muka.png')">
+                <img src="assets/img/Patung Catur Muka.png" alt="Image 8" />
+              </div>
+              <div class="slide-gallery" onclick="openLightbox('assets/img/Patung Satria Gatot Kaca.png')">
+                <img src="assets/img/Patung Satria Gatot Kaca.png" alt="Image 9" />
+              </div>
+              <div class="slide-gallery" onclick="openLightbox('assets/img/omedomedan.jpg')">
+                <img src="assets/img/omedomedan.jpg" alt="Image 10" />
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container">
+            <div class="gallery" id="gallery3">
+              <div class="slide-gallery blue" onclick="openLightbox('assets/img/lukisan+klasik.png')">
+                <img src="assets/img/lukisan+klasik.png" alt="Image 6" />
+              </div>
+              <div class="slide-gallery" onclick="openLightbox('assets/img/lukisan+kolonial.png')">
+                <img src="assets/img/lukisan+kolonial.png" alt="Image 7" />
+              </div>
+              <div class="slide-gallery" onclick="openLightbox('assets/img/Patung Catur Muka.png')">
+                <img src="assets/img/Patung Catur Muka.png" alt="Image 8" />
+              </div>
+              <div class="slide-gallery" onclick="openLightbox('assets/img/Patung Satria Gatot Kaca.png')">
+                <img src="assets/img/Patung Satria Gatot Kaca.png" alt="Image 9" />
+              </div>
+              <div class="slide-gallery" onclick="openLightbox('assets/img/omedomedan.jpg')">
+                <img src="assets/img/omedomedan.jpg" alt="Image 10" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Lightbox -->
+          <div class="lightbox" id="lightbox">
+            <button class="close-button" onclick="closeLightbox()">✕</button>
+            <img src="" alt="Large Image" id="lightbox-image" />
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer_container">
+        <div class="logo-footer">
+          <a href="index.html">
+            <img src="assets/img/logo.png" alt="" style="height: 70px" />
+          </a>
+        </div>
+        <div class="social_media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p style="color: white">BaliYuks © 2024 All Rights Reserved.</p>
+      </div>
+    </footer>
+    <!-- script galery -->
+    <script>
+      const gallery1 = document.getElementById("gallery1");
+      const gallery2 = document.getElementById("gallery2");
+      const gallery3 = document.getElementById("gallery3");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightbox-image");
+
+      // Fungsi untuk membuka lightbox dengan gambar yang dipilih
+      function openLightbox(imageSrc) {
+        lightboxImage.src = imageSrc;
+        lightbox.style.display = "flex";
+      }
+
+      // Fungsi untuk menutup lightbox
+      function closeLightbox() {
+        lightbox.style.display = "none";
+      }
+
+      window.addEventListener("load", () => {
+        const cloneSlides1 = gallery1.innerHTML;
+        const cloneSlides2 = gallery2.innerHTML;
+        const cloneSlides3 = gallery3.innerHTML;
+
+        gallery1.innerHTML += cloneSlides1;
+        gallery2.innerHTML += cloneSlides2;
+        gallery3.innerHTML += cloneSlides3;
+
+        let animationId1, animationId2, animationId3;
+
+        function startAnimation1() {
+          animationId1 = requestAnimationFrame(animate1);
+        }
+
+        function animate1() {
+          gallery1.scrollLeft += 1;
+
+          if (gallery1.scrollLeft >= gallery1.scrollWidth / 2) {
+            gallery1.scrollLeft = 0;
+          }
+
+          animationId1 = requestAnimationFrame(animate1);
+        }
+
+        function startAnimation2() {
+          animationId2 = requestAnimationFrame(animate2);
+        }
+
+        function animate2() {
+          gallery2.scrollLeft -= 1;
+
+          if (gallery2.scrollLeft <= 0) {
+            gallery2.scrollLeft = gallery2.scrollWidth / 2;
+          }
+
+          animationId2 = requestAnimationFrame(animate2);
+        }
+
+        function startAnimation3() {
+          animationId3 = requestAnimationFrame(animate3);
+        }
+
+        function animate3() {
+          gallery3.scrollLeft += 1;
+
+          if (gallery3.scrollLeft >= gallery3.scrollWidth / 2) {
+            gallery3.scrollLeft = 0;
+          }
+
+          animationId3 = requestAnimationFrame(animate3);
+        }
+
+        startAnimation1();
+        startAnimation2();
+        startAnimation3();
+      });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

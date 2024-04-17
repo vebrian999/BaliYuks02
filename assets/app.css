@@ -1,0 +1,1611 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Poppins;
+  font-size: 12px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.jumbotron {
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  height: 720px;
+  color: white;
+  padding: 20px;
+  transition: background-image 1s ease;
+}
+
+#jumbotronText {
+  font-size: 16px;
+}
+
+.text-jumbotron {
+  padding: 250px;
+}
+
+.btn-jumb {
+  position: absolute;
+  justify-content: space-between;
+  z-index: 100;
+  display: flex;
+  width: 97%;
+  top: 50%;
+  align-items: center;
+}
+
+.btn-jumb button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #00aaff7d;
+  border: none;
+  color: #ffffff7d;
+  font-family: monospace;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.btn-jumb button:hover {
+  background-color: #00a9ff;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* bagian start end */
+
+/* start navbar */
+nav a {
+  font-weight: normal;
+  font-size: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav {
+  padding: 5px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: transform 1s ease, background-color 1s ease;
+  transform: translateY(-100%);
+  z-index: 999999;
+  background-color: #00a9ff;
+}
+
+nav.scrolled {
+  background-color: #00a9ff;
+  color: black;
+  transform: translateY(-100%);
+}
+
+nav.scrolled.show {
+  transform: translateY(0);
+}
+
+nav:hover {
+  background-color: #00a9ff;
+  color: black;
+}
+
+nav .logo {
+  height: 70px;
+}
+
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu-icon .bar {
+  width: 30px;
+  height: 3px;
+  background-color: #00a9ff;
+  margin: 6px 0;
+  transition: 0.4s;
+  margin: 5px;
+  padding: 2px;
+}
+/* bagian nav end */
+
+/*start tentang seputar bali */
+
+.background-seputar-bali {
+  background-image: url("../assets/img/bg-seputar-bali.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: auto;
+}
+
+.seputar-bali {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+.seputar-bali-kiri {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  width: 70%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.seputar-bali-kanan {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  align-items: center;
+  width: 30%;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.head-bali-kanan {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+}
+
+.judul-bali-kanan {
+  text-align: center;
+  font-size: 32px;
+}
+
+.judul-bali-kiri {
+  text-align: start;
+  font-size: 32px;
+}
+
+.what-bali {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.geografis-bali {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.jumlah-ragam-bali {
+  background-color: rgba(255, 255, 255, 0.5);
+
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+}
+
+.jumlah-ragam-bali1 {
+  padding: 0px 20px;
+  padding-bottom: 20px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: #00a9ff;
+  overflow: hidden;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  overflow: hidden;
+  animation: morph 3s linear infinite;
+  transition: transform 0.6s ease;
+}
+
+.circle:hover {
+  transform: scale(1.2);
+}
+.circle img {
+  width: 100%;
+}
+
+@keyframes morph {
+  0%,
+  100% {
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
+}
+
+.button-jumlah-bali {
+  background-color: white;
+  width: 100px;
+  text-align: center;
+  border-radius: 8px;
+  display: flex;
+  margin-left: 20%;
+  transition: background-color 0.3s;
+}
+
+.button-jumlah-bali:hover {
+  background-color: #00a9ff;
+}
+.button-jumlah-bali a {
+  width: 100px;
+  padding: 10px;
+  text-decoration: none;
+  color: #00a9ff;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.button-jumlah-bali a:hover {
+  color: #fff;
+}
+.item-circle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* awal pop up */
+.judul-popup {
+  font-size: 20px;
+}
+.popup-wrap {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+}
+
+.popup-box {
+  width: 400px;
+  padding: 20px;
+  transform: translate(-50%, -50%) scale(0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  background: #fff;
+  text-align: center;
+  border-radius: 20px;
+
+  .close-btn {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all ease 0.5s;
+    border-radius: 1000px;
+    background: #ff0022;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+
+    &:hover {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.transform-in,
+.transform-out {
+  display: block;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.transform-in {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.transform-out {
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.fa-female {
+  color: rgb(252, 114, 114);
+  width: 50px;
+  height: 50px;
+  font-size: 70px;
+}
+
+.fa-male {
+  color: rgb(43, 121, 255);
+  width: 50px;
+  height: 50px;
+  font-size: 70px;
+}
+
+a.fa {
+  width: 60px;
+  height: 50px;
+  font-size: 70px;
+  text-decoration: none;
+}
+
+.sejarah {
+  margin-bottom: 25%;
+}
+.intro-sejarah {
+  padding: 40px 40px;
+}
+
+.sjr {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.sjr-1 {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+  padding: 30px;
+}
+
+.sjr-3 {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  gap: 4%;
+  padding: 30px;
+}
+
+.bg-sjr1-kiri {
+  background-image: url("../assets/img/bg-sejarah.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: auto;
+}
+
+.image-kiri-sjr {
+  position: relative;
+  left: 45%;
+  top: 7%;
+  width: 65%;
+}
+
+.image-kanan-sjr {
+  position: relative;
+  right: 10%;
+  top: 10%;
+  width: 65%;
+}
+
+.merdeka-h2 {
+  width: 600px;
+}
+
+strong {
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.dest-kiri {
+  display: flex;
+  padding: 5%;
+}
+
+.tari-img {
+  height: 600px;
+}
+
+.cont {
+  margin-top: 10%;
+  color: white;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dest {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0px;
+  font-size: 96px;
+  color: white;
+  padding: 15px;
+}
+
+.destination {
+  flex: 0 0 auto;
+  width: 100%;
+  margin-right: -1px;
+  background-color: #00a9ff;
+  color: white;
+  padding: 15px;
+}
+.destination1 {
+  flex: 0 0 auto;
+  width: 100%;
+  margin-right: 10px;
+  background-color: #00a9ff;
+  color: white;
+  padding: 15px;
+}
+.destination2 {
+  flex: 0 0 auto;
+  width: 100%;
+  margin-right: 10px;
+  background-color: #00a9ff;
+  color: white;
+  padding: 15px;
+}
+.destination3 {
+  flex: 0 0 auto;
+  width: 100%;
+  margin-right: 10px;
+  background-color: #00a9ff;
+  color: white;
+  padding: 15px;
+}
+
+/* start text berjalan */
+.judul {
+  overflow: hidden;
+  padding: 60px 0;
+  white-space: nowrap;
+  position: relative;
+  background-color: #00a9ff;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin: 40px 0px;
+  text-align: center;
+  color: white;
+  background-image: url("../assets/img/bg-sejarah.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: auto;
+}
+
+.dast-dest {
+  display: flex;
+  /* overflow-x: hidden; */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.destination h2 {
+  color: white;
+}
+
+.seni-tari-mobile {
+  display: none;
+}
+
+/* end tari*/
+
+/* start galeri */
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.gallery {
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+.slide-gallery {
+  width: 256px;
+  height: 190px;
+  margin: 15px;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slide-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blue {
+  background: blue;
+}
+
+/* Lightbox styling */
+.lightbox {
+  position: fixed;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.lightbox img {
+  margin-top: 3%;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* Tombol close untuk lightbox */
+.close-button {
+  position: absolute;
+  top: 14%;
+  right: 1%;
+  padding: 8px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* end galeri */
+
+/* start korosel */
+
+/* carousel */
+.carousel {
+  height: 100vh;
+  margin-top: -50px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel .list .item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0 0 0 0;
+}
+.carousel .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel .list .item .content {
+  position: absolute;
+  top: 20%;
+  width: 1140px;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  box-sizing: border-box;
+  color: #fff;
+  text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .author {
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 16px;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic {
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1.3em;
+}
+.carousel .list .item .topic {
+  color: #00a9ff;
+}
+.carousel .list .item .buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  grid-template-rows: 40px;
+  gap: 5px;
+  margin-top: 20px;
+}
+.carousel .list .item .buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  text-decoration: none;
+  background-color: #00a9ff;
+  letter-spacing: 3px;
+  font-family: Poppins;
+  font-weight: 500;
+  color: white;
+}
+.carousel .list .item .buttons a:nth-child(2) {
+  background-color: transparent;
+  border: 1px solid #00a9ff;
+  color: #ffffff;
+}
+/* thumbail */
+.thumbnail {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: max-content;
+  z-index: 100;
+  display: flex;
+  gap: 20px;
+}
+.thumbnail .item {
+  width: 150px;
+  height: 220px;
+  flex-shrink: 0;
+  position: relative;
+}
+.thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.thumbnail .item .content {
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+.thumbnail .item .content .title {
+  font-weight: 500;
+}
+.thumbnail .item .content .description {
+  font-weight: 300;
+}
+/* arrows */
+.arrows {
+  position: absolute;
+  top: 80%;
+  right: 52%;
+  z-index: 100;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.arrows button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #00aaff7d;
+  border: none;
+  color: #ffffff7d;
+  font-family: monospace;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.arrows button:hover {
+  background-color: #00a9ff;
+  color: #ffffff;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1) {
+  z-index: 1;
+}
+
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 1s linear 1 forwards;
+}
+@keyframes showContent {
+  to {
+    transform: translateY(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+.carousel .list .item:nth-child(1) .content .title {
+  animation-delay: 1.2s !important;
+}
+.carousel .list .item:nth-child(1) .content .topic {
+  animation-delay: 1.4s !important;
+}
+.carousel .list .item:nth-child(1) .content .des {
+  animation-delay: 1.6s !important;
+}
+.carousel .list .item:nth-child(1) .content .buttons {
+  animation-delay: 1.8s !important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img {
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  border-radius: 30px;
+  animation: showImage 0.5s linear 1 forwards;
+}
+@keyframes showImage {
+  to {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1) {
+  overflow: hidden;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+.carousel.prev .list .item img {
+  z-index: 100;
+}
+@keyframes showThumbnail {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+}
+.carousel.next .thumbnail {
+  animation: effectNext 0.5s linear 1 forwards;
+}
+
+@keyframes effectNext {
+  from {
+    transform: translateX(150px);
+  }
+}
+
+/* running time */
+
+.carousel .time {
+  position: absolute;
+  z-index: 1000;
+  width: 0%;
+  height: 3px;
+  background-color: #a0e9ff;
+  left: 0;
+  top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time {
+  animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2) {
+  z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img {
+  animation: outFrame 0.5s linear 1 forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@keyframes outFrame {
+  to {
+    width: 150px;
+    height: 220px;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 20px;
+  }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1) {
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button {
+  pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons {
+  animation: contentOut 1.5s linear 1 forwards !important;
+}
+
+@keyframes contentOut {
+  to {
+    transform: translateY(-150px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 678px) {
+  .carousel .list .item .content {
+    padding-right: 0;
+  }
+  .carousel .list .item .content .title {
+    font-size: 30px;
+  }
+}
+
+/* end corousel */
+
+/* start card-budaya */
+
+.card-budaya {
+  min-height: 70vh;
+  display: flex;
+  gap: 20px;
+  place-items: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* .card-card-budaya {
+margin: 20px;
+} */
+
+.background-card-budaya {
+  background-image: url("../assets/img/bg-seputar-bali.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
+  height: auto;
+}
+.overlay-content h1 {
+  font-size: 5.25vmin;
+  text-align: center;
+  color: white;
+}
+.text p {
+  font-size: max(10pt, 2.5vmin);
+  line-height: 1.4;
+  color: #0e390e;
+  margin-bottom: 1.5rem;
+}
+
+.wrap-budaya {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 85vmin;
+  height: 65vmin;
+  margin: 2rem auto;
+  border: 8px solid;
+  border-color: #89cff3;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efek scaling saat hover */
+/* .wrap-budaya:hover {
+  transform: scale(1.07);
+} */
+.overlay {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0.75rem;
+  background: #00a9ff;
+  transition: 0.4s ease-in-out;
+  z-index: 1;
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 15vmin;
+  height: 100%;
+  padding: 0.5rem 0 0 0.5rem;
+  border: 3px solid;
+  border-color: #89cff3;
+  border-image: linear-gradient(to bottom, #89cff3, #89cff3, #89cff3, #a0e9ff) 0 0 0 100%;
+  transition: 0.3s ease-in-out 0.2s;
+  z-index: 1;
+}
+
+.image-content {
+  position: absolute;
+  top: 0;
+  right: -15%;
+  width: 47vmin;
+  height: 100%;
+  background-image: url("../assets/img/agama+ritual.png");
+  background-size: cover;
+  background-position: center;
+  transition: 0.3s ease-in-out;
+  /* border: 1px solid green; */
+}
+
+.image-content-1 {
+  background-image: url("../assets/img/adat+tradisi.png");
+}
+
+.image-content-2 {
+  background-image: url("../assets/img/lukisan+patung.png");
+}
+
+.inset {
+  max-width: 50%;
+  margin: 0.25em 1em 1em 0;
+  border-radius: 0.25em;
+  float: left;
+}
+
+.dots {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 55px;
+  height: 4vmin;
+  transition: 0.3s ease-in-out 0.3s;
+}
+.dot {
+  width: 14px;
+  height: 14px;
+  background: #00a9ff;
+  border: 1px solid fff;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out 0.3s;
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  right: 0%;
+  width: 42vmin;
+  height: 100%;
+  padding: 3vmin 4vmin;
+  background: #fff;
+  box-shadow: inset 1px 1px 15px 0 rgba(0 0 0 / 0.4);
+  overflow-y: scroll;
+}
+
+.wrap-budaya:hover .overlay {
+  transform: translateX(-49vmin);
+}
+.wrap-budaya:hover .image-content {
+  width: 30vmin;
+}
+.wrap-budaya:hover .overlay-content {
+  border: none;
+  transition-delay: 0.2s;
+  transform: translateX(47vmin);
+}
+.wrap-budaya:hover .dots {
+  transform: translateX(1rem);
+}
+.wrap-budaya:hover .dots .dot {
+  background: white;
+}
+
+/* Animations and timing delays */
+.animate {
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+  animation-fill-mode: backwards;
+}
+/* Pop In */
+.pop {
+  animation-name: pop;
+}
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+/* Slide In */
+.slide {
+  animation-name: slide;
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translate(4em, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/* Slide Left */
+.slide-left {
+  animation-name: slide-left;
+}
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translate(-40px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.slide-up {
+  animation-name: slide-up;
+}
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(3em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+.delay-2 {
+  animation-delay: 0.6s;
+}
+.delay-3 {
+  animation-delay: 0.9s;
+}
+.delay-4 {
+  animation-delay: 1.2s;
+}
+.delay-5 {
+  animation-delay: 1.5s;
+}
+.delay-6 {
+  animation-delay: 1.8s;
+}
+.delay-7 {
+  animation-delay: 2.1s;
+}
+.delay-8 {
+  animation-delay: 2.4s;
+}
+
+.button-budaya {
+  text-align: center;
+}
+
+.tombol-budaya {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #00a9ff;
+  border: 2px solid #00a9ff;
+  border-radius: 8px;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.tombol-budaya:hover {
+  background-color: #0077cc;
+  border-color: #0077cc;
+}
+
+/* start footer */
+.ground {
+  min-height: 100vh;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  background: #00a9ff;
+  padding: 20px 0;
+}
+
+.footer_container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+
+.logo-footer {
+  width: 180px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.social_media {
+  margin: 20px 150px;
+}
+
+.social_media a {
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.6s;
+}
+
+.social_media a:hover {
+  color: #89cff3;
+}
+/* end footer */
+
+/* end card */
+
+/* CSS untuk perangkat tablet */
+@media (max-width: 991px) {
+  nav ul {
+    top: 70px;
+  }
+  p {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+  }
+  .mobile-menu-icon {
+    display: none;
+  }
+
+  nav .logo {
+    display: block;
+  }
+
+  nav li {
+    padding: 15px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .video-bali iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .lokasi-bali iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-budaya {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrap-budaya {
+    width: 100%;
+    margin: 0;
+  }
+
+  .sjr {
+    overflow-x: hidden; /* Menyembunyikan scroll horizontal */
+  }
+  .sjr-3 {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    gap: 1.5%;
+    padding: 30px;
+  }
+  .sjr-1 {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5%;
+    padding: 30px;
+  }
+  .footer_container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* ini respomsif mobile yakk */
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .footer_container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  #horizontal {
+    display: none;
+  }
+.seni-tari-mobile {
+  display: flex;
+}
+  p {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+  }
+
+  .logo-footer {
+    margin-bottom: 20px;
+  }
+
+  .social_media {
+    margin: 20px auto;
+  }
+
+  .social_media a {
+    margin: 0 10px; /* Ubah margin menjadi 10px */
+  }
+  .text-jumbotron {
+    margin-top: 150px;
+    padding: 30px;
+  }
+
+  /* nav */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #00a9ff;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease, display 0s ease 0.3s;
+  }
+
+  nav ul.show {
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  nav li {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav a {
+    color: #fff;
+  }
+
+  nav .logo {
+    height: 70px;
+    display: none;
+  }
+
+  nav {
+    align-items: start;
+    background: none;
+  }
+
+  nav:hover {
+    background-color: initial;
+    color: initial;
+  }
+
+  nav.scrolled {
+    background-color: transparent;
+    color: white;
+  }
+  /* nav */
+
+  .btn-jumb {
+    z-index: 100;
+    top: 50%;
+    width: 89%;
+    align-items: center;
+  }
+
+  .seputar-bali {
+    flex-direction: column;
+  }
+
+  .video-bali iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .lokasi-bali iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .seputar-bali-kiri,
+  .seputar-bali-kanan {
+    width: 100%;
+  }
+
+  .wrap {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+  .lukis-lukis {
+    color: red;
+  }
+  .popup-box {
+    width: 329px;
+
+    top: 50%;
+    left: 50%;
+  }
+  /* start sejarah */
+
+  .judul {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .judul h2 {
+    white-space: normal;
+    line-height: 1.2;
+    font-size: 32px;
+    color: white;
+  }
+
+  .bali-kanan-barong {
+    display: none;
+  }
+
+  .carousel {
+    margin-top: 35px;
+  }
+
+  div .thumbnail {
+    display: none;
+  }
+  .arrows {
+    display: none;
+  }
+  .carousel .list .item .content {
+    position: absolute;
+    top: 20px;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .intro-sejarah {
+    padding: 0px 20px 20px 20px;
+  }
+  .sjr {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .sjr-1,
+  .sjr-3 {
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+    margin: 0%;
+  }
+
+  .bg-sjr1-kiri {
+    height: 200px;
+  }
+
+  .image-kiri-sjr {
+    width: 40%;
+    height: auto;
+    margin: 10px auto;
+    left: 30%;
+    top: -1%;
+  }
+  .image-kanan-sjr {
+    width: 40%;
+    height: auto;
+    margin: 10px auto;
+    right: -30%;
+    top: -1%;
+  }
+
+  .merdeka-h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  strong {
+    font-size: 24px;
+  }
+
+  .pocici-mobile {
+    margin: 10px 0px;
+  }
+  /* end sejarah */
+
+  /* start jenis tarian */
+  .horizontal__item {
+    flex-direction: column;
+  }
+
+  .horizontal__num {
+    padding: 20px;
+  }
+
+  .tari-img {
+    width: 100px;
+    height: auto;
+    height: 100px;
+  }
+
+  .cont {
+    text-align: center;
+  }
+
+  .dest {
+    display: none;
+  }
+
+  .destination {
+    padding: 20px;
+  }
+
+  .dast-dest {
+    /* overflow-x: hidden; */
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* end jenis tarian */
+
+  .seeM {
+    width: 35%;
+  }
+
+  .card-budaya {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrap-budaya {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* yayaya */
+
+  .thumbnail .item {
+    width: 130px;
+    height: 180px;
+    flex-shrink: 0;
+    position: relative;
+  }
+}
